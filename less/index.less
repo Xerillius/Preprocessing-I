@@ -54,6 +54,117 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+}
+
+/* start of my code */
+@h1-size: 5vw;
+@h2-size: 4vw;
+@h3-size: 3vw;
+
+h1, h2, h3 {
+	font-weight: bold;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: auto;
+	@media(max-width: 500px) {
+		width: 90%;
+	}
+	@media(min-width: 501px) and (max-width: 800px) {
+		width: 75%;
+	}
+	@media(min-width: 801px) {
+		width: 800px;
+	}
+}
+
+.apone-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid black;
+
+	img {
+		border-radius: 50%;
+	}
+
+	@media(max-width: 500px) {
+		flex-direction: column-reverse;
+		img {
+			margin-top: 10px;
+			width: 80vw;
+		}
+		h1 {
+			font-size: @h1-size + 2vw;
+		}
+	}
+	
+	@media(min-width: 501px) and (max-width: 800px) {
+		img {
+			width: 50vw;
+		}
+		h1 {
+			font-size: @h1-size + 1vw;
+		}
+	}
+
+	@media(min-width: 801px) {
+		img {
+			width: 30vw;
+		}
+		h1 {
+			font-size: @h1-size;
+		}
+	}
+}
+
+.about-me {
+	display: flex;
+	flex-direction: column;
+	@media(min-width: 501px) {
+		.reverse {
+			flex-direction: row-reverse;
+		}
+	}
+	.am-content {
+		margin: 5px 0px 5px 0px;
+		display: flex;
+		justify-content: space-between;
+		img {
+			width: 50%;
+		}
+		ul {
+			list-style-type: square;
+			list-style-position: inside;
+		}
+		.content {
+			margin: 1%;
+		}
+		@media(max-width: 500px) {
+			margin: 5px auto;
+			flex-direction: column;
+			img {
+				width: 100%;
+			}
+			p {
+				font-size: 10pt;
+			}
+		}
+		@media(min-width: 501px) and (max-width: 800px) {
+			img {
+				width: 100%;
+			}
+			flex-direction: column;
+		}
+		@media(min-width: 800px) {
+		}
+	}
 }
 

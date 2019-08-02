@@ -1,1 +1,246 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* start of my code */
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  body {
+    width: 90%;
+  }
+}
+@media (min-width: 501px) and (max-width: 800px) {
+  body {
+    width: 75%;
+  }
+}
+@media (min-width: 801px) {
+  body {
+    width: 800px;
+  }
+}
+.apone-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.apone-header img {
+  border-radius: 50%;
+}
+@media (max-width: 500px) {
+  .apone-header {
+    flex-direction: column-reverse;
+  }
+  .apone-header img {
+    margin-top: 10px;
+    width: 80vw;
+  }
+  .apone-header h1 {
+    font-size: 7vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 800px) {
+  .apone-header img {
+    width: 50vw;
+  }
+  .apone-header h1 {
+    font-size: 6vw;
+  }
+}
+@media (min-width: 801px) {
+  .apone-header img {
+    width: 30vw;
+  }
+  .apone-header h1 {
+    font-size: 5vw;
+  }
+}
+.about-me {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 501px) {
+  .about-me .reverse {
+    flex-direction: row-reverse;
+  }
+}
+.about-me .am-content {
+  margin: 5px 0px 5px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.about-me .am-content img {
+  width: 50%;
+}
+.about-me .am-content ul {
+  list-style-type: square;
+  list-style-position: inside;
+}
+.about-me .am-content .content {
+  margin: 1%;
+}
+@media (max-width: 500px) {
+  .about-me .am-content {
+    margin: 5px auto;
+    flex-direction: column;
+  }
+  .about-me .am-content img {
+    width: 100%;
+  }
+  .about-me .am-content p {
+    font-size: 10pt;
+  }
+}
+@media (min-width: 501px) and (max-width: 800px) {
+  .about-me .am-content {
+    flex-direction: column;
+  }
+  .about-me .am-content img {
+    width: 100%;
+  }
+}
